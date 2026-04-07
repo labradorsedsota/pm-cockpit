@@ -38,7 +38,6 @@ pm-cockpit Skill（规范层 + 巡检层）
 ├── 应用 (App)
 │   ├── 版本 (Version)
 │   ├── 测试点 (Testpoint)
-
 │   └── 轨迹 (Trace)
 ├── 任务 (Task)
 ├── 决策 (Decision)
