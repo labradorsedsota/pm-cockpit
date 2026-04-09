@@ -37,7 +37,13 @@ Phase 0 回查中暴露了 5 类执行缺陷，本规范将隐含假设转化为
 open -a "Google Chrome" <目标URL>
 sleep 2
 # 窗口最大化（v1.4 新增）
-osascript -e 'tell application "Google Chrome" to set bounds of front window to {0, 0, 1920, 1080}'
+osascript -e '
+tell application "Finder"
+    set _b to bounds of window of desktop
+    tell application "Google Chrome"
+        set bounds of front window to {0, 0, item 3 of _b, item 4 of _b}
+    end tell
+end tell'
 ```
 
 - Golden 测试 → 本地 golden.html（如 `file:///tmp/vla-phase0/apps/md2wechat/golden.html`）
