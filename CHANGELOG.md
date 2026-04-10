@@ -6,6 +6,18 @@ pm-cockpit 版本与变更记录。
 
 ---
 
+## [v0.5.0] - 2026-04-10
+
+### Added
+- mano-cua-execution-spec 升级至 v1.6：
+  - 条款 1b-fallback：Pre-flight JS 操作降级链（AppleScript → DevTools Console → BLOCKED）— 来源：OMS 回顾
+  - 条款 6a/7a 修订：BLOCKED 强制诊断（失败现象 + 根因 + ≥2 解决方案）— 来源：OMS 回顾
+- test-requirements.md：新增 BLOCKED 强制诊断要求（指派层）
+- SKILL.md Phase 4：新增文档合规 Checklist 交接步骤（TEST-CASE 5 章 + TEST-REPORT 8 章）
+
+### 来源
+OMS 项目回顾（order-management-lite/REVIEW.md）中 4 条未解决问题的前 3 条。第 4 条（同类测试方式一致性）已记入 Issue 追踪。
+
 ## [v0.4.0] - 2026-04-10
 
 ### Added
@@ -54,6 +66,7 @@ pm-cockpit 版本与变更记录。
 | v0.1.0 | 方案文档 + 测试规范 | 项目初始化 |
 | v0.2.0 | Skill 正式发布 | 首次可安装使用 |
 | v0.3.0 | 执行规范修复 | 窗口尺寸兼容 |
+| v0.5.0 | OMS 回顾修复 | BLOCKED 诊断 + Console 降级 + Checklist |
 | v0.4.0 | 测试设计规范 + 三层链条 | 测试体系完整化 |
 
 ## 子文档版本追踪
@@ -61,7 +74,7 @@ pm-cockpit 版本与变更记录。
 | 文档 | 当前版本 | 最后更新 |
 |------|---------|---------|
 | SKILL.md | — | 2026-04-08 |
-| mano-cua-execution-spec.md | v1.5 | 2026-04-10 |
+| mano-cua-execution-spec.md | v1.6 | 2026-04-10 |
 | test-case-design-spec.md | v1.0 | 2026-04-10 |
 | pm-cockpit-proposal.md | v3 | 2026-04-07 |
 | GROUP.md | — | 2026-04-07 |

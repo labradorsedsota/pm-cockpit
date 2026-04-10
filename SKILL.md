@@ -64,7 +64,13 @@ AI Agent 团队项目管理全流程操作手册。PM（Pichai）读取此 skill
    - 条款 11：evaluation 与日志交叉验证
    ```
 3. 要求 Moss 先写 TEST-CASE.md（含 fixture 文件），PM 确认后再执行
-4. Moss 完成 → @PM 交付 TEST-REPORT.md
+4. **PM 附文档合规 Checklist（v0.5 新增）：**
+   ```
+   📋 文档合规 Checklist（交付前逐项确认）：
+   TEST-CASE.md：□ 文档信息 □ 测试范围 □ 测试用例(L1/L2/L3) □ Fixture清单 □ 测试环境
+   TEST-REPORT.md：□ 文档信息 □ 范围与环境 □ 总结 □ 详细结果 □ 缺陷记录 □ Session记录 □ 时间线 □ 经验建议
+   ```
+5. Moss 完成 → @PM 交付 TEST-REPORT.md
 
 ### Phase 5: Bug 修复（如有）
 
