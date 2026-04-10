@@ -6,6 +6,15 @@ pm-cockpit 版本与变更记录。
 
 ---
 
+## [v0.5.1] - 2026-04-10
+
+### Added
+- SKILL.md Phase 4：新增「PM 验收报告 Check」步骤 — PM 收到 TEST-REPORT 后按 checklist 逐项检查（Session ID 完整性、章节完整性、BLOCKED 诊断、mosstid 关联等），不通过打回修正
+- doc-deliverables.md Test Report 第 6 章：新增 Session ID 格式约束 — 完整 32 位 UUID，从日志原文复制，禁止截断
+
+### 来源
+OMS 项目回顾 — Session ID 截断问题（林菡发现，Moss 根因分析）。品鉴者要求在 PM 验收环节做 check 而非仅在模板里约束。
+
 ## [v0.5.0] - 2026-04-10
 
 ### Added
@@ -66,6 +75,7 @@ OMS 项目回顾（order-management-lite/REVIEW.md）中 4 条未解决问题的
 | v0.1.0 | 方案文档 + 测试规范 | 项目初始化 |
 | v0.2.0 | Skill 正式发布 | 首次可安装使用 |
 | v0.3.0 | 执行规范修复 | 窗口尺寸兼容 |
+| v0.5.1 | PM 报告验收 Check | Session ID 完整性 + 验收 checklist |
 | v0.5.0 | OMS 回顾修复 | BLOCKED 诊断 + Console 降级 + Checklist |
 | v0.4.0 | 测试设计规范 + 三层链条 | 测试体系完整化 |
 

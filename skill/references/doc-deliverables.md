@@ -45,6 +45,7 @@
 4. 详细结果（每条含 mosstid + 观测摘要）
 5. 缺陷记录（严重程度、mosstid、发现版本、根因、修复版本、修复 commit、回归结果）
 6. mano-cua Session 记录（含 mosstid、Session ID、合规检查）
+   - **Session ID 格式约束：** 完整 32 位 UUID，从 `tracker.jsonl` 或 mano-cua 日志的 `Session created` 行原文复制，禁止手动截短。汇总表列宽问题通过调整其他列解决，不截断 ID。
 7. 项目时间线
 8. 经验与改进建议
 

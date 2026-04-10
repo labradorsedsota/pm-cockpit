@@ -71,6 +71,18 @@ AI Agent 团队项目管理全流程操作手册。PM（Pichai）读取此 skill
    TEST-REPORT.md：□ 文档信息 □ 范围与环境 □ 总结 □ 详细结果 □ 缺陷记录 □ Session记录 □ 时间线 □ 经验建议
    ```
 5. Moss 完成 → @PM 交付 TEST-REPORT.md
+6. **PM 验收报告 Check（v0.5.1 新增）：** 收到 TEST-REPORT 后，PM 按以下清单逐项检查，不通过的打回修正：
+   ```
+   🔍 PM 报告验收 Checklist：
+   □ 章节完整性：8 章全有，无遗漏
+   □ Session ID：全部为完整 32 位 UUID，无截断
+   □ mosstid：每条结果都有，格式正确
+   □ BLOCKED 项：附诊断（现象+根因+≥2方案）
+   □ 同类测试方式一致
+   □ 缺陷表：mosstid + 修复 commit 关联完整
+   □ 观测摘要：逐条有正面/负面事实
+   □ 汇总数据：PASS/FAIL/BLOCKED 计数与详细结果一致
+   ```
 
 ### Phase 5: Bug 修复（如有）
 
