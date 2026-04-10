@@ -1,6 +1,6 @@
 ---
 name: pm-cockpit
-description: Project management cockpit for AI agent teams. Use when managing software development projects with multi-agent collaboration (PM + Dev + QA). Triggers on: "用 pm-cockpit", "启用 pm-cockpit", "pm-cockpit skill", "项目管理模式", or when GROUP.md contains "管理模式：pm-cockpit". Covers full lifecycle: project startup → requirements → PRD → development → testing → bug fix → regression → acceptance.
+description: "Project management cockpit for AI agent teams. Use when managing software development projects with multi-agent collaboration (PM + Dev + QA). Triggers on: 用 pm-cockpit, 启用 pm-cockpit, pm-cockpit skill, 项目管理模式, or when GROUP.md contains 管理模式：pm-cockpit. Covers full lifecycle: project startup → requirements → PRD → development → testing → bug fix → regression → acceptance."
 ---
 
 # pm-cockpit
