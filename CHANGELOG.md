@@ -6,6 +6,16 @@ pm-cockpit 版本与变更记录。
 
 ---
 
+## [v0.5.3] - 2026-04-10
+
+### Added
+- patrol-rules.md：新增「执行方进度汇报要求」— 测试每 5 条/15 分钟、开发每 1 模块/15 分钟主动汇报进度
+- SKILL.md Phase 3：新增步骤 4 开发进度汇报要求
+- SKILL.md Phase 4：新增步骤 4 测试进度汇报要求
+
+### 来源
+60 条 test case 场景下，巡检 20 分钟催一次但执行方可能 7 小时静默。需要执行方主动汇报以让巡检能区分「在跑」vs「真的卡了」。
+
 ## [v0.5.2] - 2026-04-10
 
 ### Added
@@ -84,6 +94,7 @@ OMS 项目回顾（order-management-lite/REVIEW.md）中 4 条未解决问题的
 | v0.1.0 | 方案文档 + 测试规范 | 项目初始化 |
 | v0.2.0 | Skill 正式发布 | 首次可安装使用 |
 | v0.3.0 | 执行规范修复 | 窗口尺寸兼容 |
+| v0.5.3 | 执行方进度汇报要求 | 测试/开发主动汇报 + 巡检配合 |
 | v0.5.2 | 巡检 cron 硬卡点 | startup-checklist 创建+验证 |
 | v0.5.1 | PM 报告验收 Check | Session ID 完整性 + 验收 checklist |
 | v0.5.0 | OMS 回顾修复 | BLOCKED 诊断 + Console 降级 + Checklist |

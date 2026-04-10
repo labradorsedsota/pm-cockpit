@@ -44,9 +44,10 @@ AI Agent 团队项目管理全流程操作手册。PM（Pichai）读取此 skill
 1. 用七要素模板指派 Fabrice
 2. 交接包含：PRD 链接、repo 地址、部署方式、验收标准
 3. 代码须上传到 repo
-4. **Fabrice 完成 → 必须 @PM，不得直接交 Moss**
-5. PM 收到交付 → 检查产出（代码、部署、功能基本可用）
-6. **🚩 品鉴者 Checkpoint：** PM 在群里 @品鉴者，汇报开发交付情况 + 部署地址，请品鉴者确认后再进入测试。品鉴者确认 → 进入 Phase 4；品鉴者有意见 → 回 Phase 3 修改
+4. **进度汇报要求：** 每完成 1 个功能模块或每 15 分钟，在群里发进度（见 patrol-rules.md）
+5. **Fabrice 完成 → 必须 @PM，不得直接交 Moss**
+6. PM 收到交付 → 检查产出（代码、部署、功能基本可用）
+7. **🚩 品鉴者 Checkpoint：** PM 在群里 @品鉴者，汇报开发交付情况 + 部署地址，请品鉴者确认后再进入测试。品鉴者确认 → 进入 Phase 4；品鉴者有意见 → 回 Phase 3 修改
 
 ### Phase 4: 测试指派
 
@@ -64,7 +65,8 @@ AI Agent 团队项目管理全流程操作手册。PM（Pichai）读取此 skill
    - 条款 11：evaluation 与日志交叉验证
    ```
 3. 要求 Moss 先写 TEST-CASE.md（含 fixture 文件），PM 确认后再执行
-4. **PM 附文档合规 Checklist（v0.5 新增）：**
+4. **进度汇报要求：** 执行测试时，每完成 5 条用例或每 15 分钟，在群里发进度（见 patrol-rules.md）
+5. **PM 附文档合规 Checklist（v0.5 新增）：**
    ```
    📋 文档合规 Checklist（交付前逐项确认）：
    TEST-CASE.md：□ 文档信息 □ 测试范围 □ 测试用例(L1/L2/L3) □ Fixture清单 □ 测试环境
