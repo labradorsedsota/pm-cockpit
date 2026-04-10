@@ -1,0 +1,70 @@
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'fontSize': '18px',
+    'fontFamily': 'system-ui, sans-serif'
+  }
+}}%%
+
+flowchart TD
+    START((("🚀 启动")))
+
+    P1["<b>Phase 1 · 项目启动</b><br/>写 GROUP.md → 需求对齐<br/>分配代号 → 创建 Repo → 巡检 cron"]
+
+    P2["<b>Phase 2 · PRD 编写</b><br/>11 章节模板 · AC · 视觉风格 · L1/L2/L3"]
+
+    CP1{{"🚩 品鉴者确认"}}
+
+    P3["<b>Phase 3 · 开发</b><br/>七要素指派 Fabrice → 开发+部署 → @PM"]
+
+    CP2{{"🚩 品鉴者确认"}}
+
+    P4["<b>Phase 4 · 测试</b><br/>七要素指派 Moss（附规范+Checklist）<br/>Moss 写 TEST-CASE → PM 确认 → 执行"]
+
+    CHECK["<b>🔍 PM 验收 Check</b><br/>Session ID · 章节 · mosstid · BLOCKED诊断"]
+
+    R1{"全 PASS？"}
+
+    P5["<b>Phase 5 · Bug 修复</b><br/>PM 提取 FAIL → 指派 Fabrice → 更新 CHANGELOG"]
+
+    P6["<b>Phase 6 · 回归测试</b><br/>只测修复项 → PM 再次验收 Check"]
+
+    R2{"全 PASS？"}
+
+    P7["<b>Phase 7 · 验收结项</b><br/>品鉴者最终确认 → 上传文档<br/>更新 GROUP.md → 删 cron → 回顾入库"]
+
+    DONE((("✅ 完成")))
+
+    START --> P1
+    P1 --> P2
+    P2 --> CP1
+    CP1 -- "确认 ✅" --> P3
+    CP1 -. "修改 ✏️" .-> P2
+    P3 --> CP2
+    CP2 -- "确认 ✅" --> P4
+    CP2 -. "有意见 ✏️" .-> P3
+    P4 --> CHECK
+    CHECK --> R1
+    R1 -- "全 PASS ✅" --> P7
+    R1 -- "有 FAIL ❌" --> P5
+    R1 -. "不通过 🔄" .-> P4
+    P5 --> P6
+    P6 --> R2
+    R2 -- "全 PASS ✅" --> P7
+    R2 -. "仍有 FAIL 🔄" .-> P5
+    P7 --> DONE
+
+    style START fill:#4A90D9,stroke:#3A7BC8,color:#fff,stroke-width:3px
+    style DONE fill:#43A047,stroke:#2E7D32,color:#fff,stroke-width:3px
+    style P1 fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#0D47A1
+    style P2 fill:#E8F5E9,stroke:#388E3C,stroke-width:2px,color:#1B5E20
+    style P3 fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100
+    style P4 fill:#FCE4EC,stroke:#C62828,stroke-width:2px,color:#B71C1C
+    style P5 fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#F57F17
+    style P6 fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C
+    style P7 fill:#E0F7FA,stroke:#00838F,stroke-width:2px,color:#006064
+    style CHECK fill:#FFF9C4,stroke:#F57F17,stroke-width:3px,color:#E65100
+    style CP1 fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
+    style CP2 fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
+    style R1 fill:#FFECB3,stroke:#FF8F00,stroke-width:2px,color:#E65100
+    style R2 fill:#FFECB3,stroke:#FF8F00,stroke-width:2px,color:#E65100
