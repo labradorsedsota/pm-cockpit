@@ -66,12 +66,32 @@ pm-cockpit
 - 活跃任务：无
 ```
 
-### 7. 群里公告启动完成
+### 7. 创建巡检 cron（硬卡点）
+
+> 来源：Phase 0 巡检未生效 + OMS 项目切换时未联动创建
+
+```bash
+openclaw cron add "{CODE}-patrol" \
+  --schedule "every 20m" \
+  --timeout 300 \
+  --task "读取 {群ID} 最近消息，检查活跃任务执行者反馈情况，有异常则催促/升级，无异常则静默" \
+  --isolated
+```
+
+**验证（必须通过才能继续）：**
+```bash
+openclaw cron list | grep {CODE}-patrol
+```
+- ✅ 看到 cron 且状态为 ok → 继续步骤 8
+- ❌ 没看到或状态为 error → 停下来排查，不往下走
+
+### 8. 群里公告启动完成
 ```
 ✅ 项目 {CODE} 启动完成
 
 - Repo：{URL}
 - Project：{URL}
+- 🔔 巡检已开启：{CODE}-patrol，每 20 分钟自动检查
 - 下一步：编写 PRD
 
 GROUP.md 已更新。
